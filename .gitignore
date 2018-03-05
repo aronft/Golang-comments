@@ -1,5 +1,11 @@
 
-
+##
 # Ejecutables
+#
 edcomments
 edcomments.exe
+
+##
+# Archivo de configuracion
+#
+config.json
