@@ -6,7 +6,7 @@ import (
 
 type Vote struct {
 	gorm.Model
-	CommnetID uint `json:"commentId" gorm:"not null"`
+	CommentID uint `json:"commentId" gorm:"not null"`
 	UserID    uint `json:"userId" gorm:"not null"`
 	Value     bool `json:"value" gorm:"not null"`
 }

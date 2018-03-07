@@ -40,7 +40,6 @@ func CommentCreate(w http.ResponseWriter, r *http.Request) {
 		commons.DisplayMessage(w, m)
 		return
 	}
-
 	m.Code = http.StatusCreated
 	m.Message = "Comentario creado con éxito"
 	commons.DisplayMessage(w, m)
@@ -84,7 +83,7 @@ func CommentGetAll(w http.ResponseWriter, r *http.Request) {
 		comments[i].Children = commentGetChildren(comments[i].ID)
 
 		// Se busca el voto del usuario en sesión
-		vote.CommnetID = comments[i].ID
+		vote.CommentID = comments[i].ID
 		vote.UserID = user.ID
 		count := db.Where(&vote).Find(&vote).RowsAffected
 		if count > 0 {
